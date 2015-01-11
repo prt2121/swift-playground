@@ -1,2 +1,2 @@
-# swift-playground
-play around with swift
+# Swift Playground
+play around with Swift
