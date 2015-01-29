@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PageViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKe-gB-42s">
+                                <rect key="frame" x="253" y="466" width="95" height="30"/>
+                                <state key="normal" title="Start Again">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="startWalkthrough" destination="mKe-gB-42s" id="2dN-ij-ZvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="SZV-q2-Ild">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="oHY-QX-Oa7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4u-wm-sUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1110" y="333"/>
+        </scene>
+        <!--Page Content View Controller-->
+        <scene sceneID="hTX-Lq-XPg">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" id="bYM-8D-1Z3" customClass="PageContentViewController" customModule="PageViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="art-zz-mtF"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZB-MG-GCL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f2h-RV-baM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-G4-hGK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufb-eB-1Ap">
+                                <rect key="frame" x="279" y="142" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="L0f-G4-hGK" firstAttribute="top" secondItem="f2h-RV-baM" secondAttribute="top" id="48l-1E-1SE"/>
+                            <constraint firstItem="Ufb-eB-1Ap" firstAttribute="centerX" secondItem="L0f-G4-hGK" secondAttribute="centerX" id="6Sg-Be-Y8o"/>
+                            <constraint firstAttribute="trailing" secondItem="L0f-G4-hGK" secondAttribute="trailing" id="Q1c-t1-UEH"/>
+                            <constraint firstItem="L0f-G4-hGK" firstAttribute="bottom" secondItem="kZB-MG-GCL" secondAttribute="top" id="SYx-ZE-cx9"/>
+                            <constraint firstItem="kZB-MG-GCL" firstAttribute="top" secondItem="Ufb-eB-1Ap" secondAttribute="bottom" constant="437" id="Vyr-T8-blu"/>
+                            <constraint firstItem="L0f-G4-hGK" firstAttribute="leading" secondItem="f2h-RV-baM" secondAttribute="leading" id="irH-Tc-39H"/>
+                            <constraint firstItem="Ufb-eB-1Ap" firstAttribute="top" secondItem="art-zz-mtF" secondAttribute="bottom" constant="122" id="jb5-08-0iW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="L0f-G4-hGK" id="cSa-we-cpb"/>
+                        <outlet property="titleLabel" destination="Ufb-eB-1Ap" id="ey1-Ng-ibP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2F-bO-h4x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="1015"/>
+        </scene>
+    </scenes>
+</document>
